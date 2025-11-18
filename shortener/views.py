@@ -35,7 +35,7 @@ def create_short(request):
         # DOMAIN FOR SHORT URL — dynamic from settings
         short_host = settings.SHORT_HOST
 
-        short_url = f"https://{short_host}/r/{slug}/"
+        short_url = f"http://{short_host}/r/{slug}/"
 
         return JsonResponse({'short_url': short_url})
 
