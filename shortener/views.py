@@ -59,3 +59,6 @@ def redirect_view(request, slug):
 
     except ShortURL.DoesNotExist:
         return JsonResponse({'error': 'not found'}, status=404)
+
+def test_api(request):
+    return JsonResponse({'status': 'API is working'})
